@@ -1,0 +1,44 @@
+{
+  "sequence": "reengagement",
+  "description": "Win-back sequence for cold/disengaged leads",
+  "timing": ["+30 days", "+45 days", "+60 days"],
+  "trigger": "no_engagement_30_days",
+  "emails": [
+    {
+      "id": "reengage_01",
+      "delay": "+30 days",
+      "subject_lines": [
+        "Did we lose you, {{first_name}}?",
+        "We miss you at Zeniqle",
+        "One last thing before you go..."
+      ],
+      "preheader": "Here's what you might have missed",
+      "html_template": "reengage_01.html",
+      "goal": "Re-engage with new value"
+    },
+    {
+      "id": "reengage_02",
+      "delay": "+45 days",
+      "subject_lines": [
+        "{{first_name}}, what's holding you back?",
+        "Quick question about your goals",
+        "Can I ask you something?"
+      ],
+      "preheader": "Reply and let me know",
+      "html_template": "reengage_02.html",
+      "goal": "Gather feedback"
+    },
+    {
+      "id": "reengage_03",
+      "delay": "+60 days",
+      "subject_lines": [
+        "Final follow-up from Zeniqle",
+        "Should we close your account?",
+        "Last chance: Keep your spot"
+      ],
+      "preheader": "We'll miss having you around",
+      "html_template": "reengage_03.html",
+      "goal": "Final conversion attempt"
+    }
+  ]
+}

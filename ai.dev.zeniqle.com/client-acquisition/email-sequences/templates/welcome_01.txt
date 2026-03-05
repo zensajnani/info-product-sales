@@ -1,0 +1,21 @@
+Hi {{first_name}},
+
+Welcome to Zeniqle! Thanks for joining thousands of teams using our AI to automate their most tedious workflows. We're excited to help {{company}} work smarter.
+
+YOUR QUICK START GUIDE
+======================
+
+1. Complete your profile setup (2 min)
+2. Connect your first integration  
+3. Run your first automated workflow
+
+Get started now: https://app.zeniqle.com/onboarding?ref=welcome
+
+Need help? Reply to this email or chat with our team at https://zeniqle.com/chat - we're here to ensure your success.
+
+Cheers,
+The Zeniqle Team
+
+---
+Zeniqle Inc. | 123 Innovation Drive, San Francisco, CA
+Unsubscribe: {{unsubscribe_url}}

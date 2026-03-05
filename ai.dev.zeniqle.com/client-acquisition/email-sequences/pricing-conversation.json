@@ -1,0 +1,56 @@
+{
+  "sequence": "pricing_conversation",
+  "description": "Sequence for leads who viewed pricing or requested quotes",
+  "timing": ["immediate", "+2 days", "+5 days", "+10 days"],
+  "trigger": "pricing_page_view OR pricing_inquiry",
+  "emails": [
+    {
+      "id": "pricing_01",
+      "delay": "immediate",
+      "subject_lines": [
+        "Your Zeniqle pricing questions answered",
+        "Transparent pricing info inside",
+        "Here's how our pricing works"
+      ],
+      "preheader": "No hidden fees, no surprises",
+      "html_template": "pricing_01.html",
+      "goal": "Address pricing concerns directly"
+    },
+    {
+      "id": "pricing_02",
+      "delay": "+2 days",
+      "subject_lines": [
+        "How to justify Zeniqle to your CFO",
+        "The ROI case for automation",
+        "Build your business case"
+      ],
+      "preheader": "Free template included",
+      "html_template": "pricing_02.html",
+      "goal": "Enable internal selling"
+    },
+    {
+      "id": "pricing_03",
+      "delay": "+5 days",
+      "subject_lines": [
+        "Flexible options for {{company_size}} teams",
+        "Let's find the right plan for you",
+        "Custom pricing available"
+      ],
+      "preheader": "We're flexible on terms",
+      "html_template": "pricing_03.html",
+      "goal": "Overcome budget objections"
+    },
+    {
+      "id": "pricing_04",
+      "delay": "+10 days",
+      "subject_lines": [
+        "{{first_name}}, can I answer any questions?",
+        "Quick follow-up on pricing",
+        "Still evaluating options?"
+      ],
+      "preheader": "Happy to hop on a quick call",
+      "html_template": "pricing_04.html",
+      "goal": "Personal outreach"
+    }
+  ]
+}

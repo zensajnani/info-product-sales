@@ -1,0 +1,77 @@
+{
+  "sequence": "welcome_series",
+  "description": "5-email welcome sequence for new subscribers",
+  "timing": ["immediate", "+1 day", "+3 days", "+7 days", "+14 days"],
+  "emails": [
+    {
+      "id": "welcome_01",
+      "delay": "immediate",
+      "subject_lines": [
+        "Welcome to Zeniqle {{first_name}} 👋",
+        "Your AI journey starts now, {{first_name}}",
+        "Thanks for joining - here's what's next"
+      ],
+      "preheader": "Here's everything you need to get started",
+      "html_template": "welcome_01.html",
+      "text_template": "welcome_01.txt",
+      "personalization": ["first_name", "company", "signup_source"],
+      "goal": "Set expectations and drive first engagement"
+    },
+    {
+      "id": "welcome_02",
+      "delay": "+1 day",
+      "subject_lines": [
+        "{{first_name}}, here's what makes us different",
+        "The Zeniqle advantage (2-min read)",
+        "Why 500+ teams chose Zeniqle"
+      ],
+      "preheader": "See how we compare to the alternatives",
+      "html_template": "welcome_02.html",
+      "text_template": "welcome_02.txt",
+      "personalization": ["first_name", "industry"],
+      "goal": "Differentiate from competitors"
+    },
+    {
+      "id": "welcome_03",
+      "delay": "+3 days",
+      "subject_lines": [
+        "Quick win: Set this up in 5 minutes",
+        "{{first_name}}, try this first",
+        "Your fastest path to results"
+      ],
+      "preheader": "One simple action = immediate value",
+      "html_template": "welcome_03.html",
+      "text_template": "welcome_03.txt",
+      "personalization": ["first_name", "use_case"],
+      "goal": "Drive first value/activation"
+    },
+    {
+      "id": "welcome_04",
+      "delay": "+7 days",
+      "subject_lines": [
+        "How {{similar_company}} achieved 40% faster delivery",
+        "Case study: {{industry}} transformation",
+        "Real results from teams like yours"
+      ],
+      "preheader": "See the impact in your industry",
+      "html_template": "welcome_04.html",
+      "text_template": "welcome_04.txt",
+      "personalization": ["first_name", "industry", "similar_company"],
+      "goal": "Build trust with social proof"
+    },
+    {
+      "id": "welcome_05",
+      "delay": "+14 days",
+      "subject_lines": [
+        "Ready to talk strategy, {{first_name}}?",
+        "Let's explore your specific needs",
+        "{{first_name}}, quick question..."
+      ],
+      "preheader": "15 minutes could change your quarter",
+      "html_template": "welcome_05.html",
+      "text_template": "welcome_05.txt",
+      "personalization": ["first_name", "engagement_score"],
+      "goal": "Convert to demo/trial"
+    }
+  ]
+}

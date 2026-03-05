@@ -1,0 +1,55 @@
+{
+  "sequence": "product_discovery",
+  "description": "Educational sequence for leads in consideration stage",
+  "timing": ["+2 days", "+5 days", "+9 days", "+16 days"],
+  "emails": [
+    {
+      "id": "discovery_01",
+      "delay": "+2 days",
+      "subject_lines": [
+        "The #1 mistake we see {{industry}} teams make",
+        "Are you making this workflow error?",
+        "What we learned from 1000+ {{industry}} audits"
+      ],
+      "preheader": "Hint: It's costing you 10+ hours per week",
+      "html_template": "discovery_01.html",
+      "goal": "Identify pain point and establish authority"
+    },
+    {
+      "id": "discovery_02",
+      "delay": "+5 days",
+      "subject_lines": [
+        "How automation changes everything (visual guide)",
+        "Before & after: Workflow transformation",
+        "See what's possible with Zeniqle"
+      ],
+      "preheader": "Real examples from teams like yours",
+      "html_template": "discovery_02.html",
+      "goal": "Show solution capabilities"
+    },
+    {
+      "id": "discovery_03",
+      "delay": "+9 days",
+      "subject_lines": [
+        "ROI Calculator: What's your automation potential?",
+        "Calculate your time savings",
+        "{{first_name}}, your personalized estimate"
+      ],
+      "preheader": "Most teams save 15+ hours per week",
+      "html_template": "discovery_03.html",
+      "goal": "Quantify value proposition"
+    },
+    {
+      "id": "discovery_04",
+      "delay": "+16 days",
+      "subject_lines": [
+        "See it live: Zeniqle demo for {{industry}}",
+        "15-min walkthrough tailored to you",
+        "{{first_name}}, let's see it in action"
+      ],
+      "preheader": "Pick a time that works for you",
+      "html_template": "discovery_04.html",
+      "goal": "Convert to demo"
+    }
+  ]
+}
