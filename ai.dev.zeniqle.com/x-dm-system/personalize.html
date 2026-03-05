@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Personalization Engine | X-DM Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/personalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <div class="logo">🚀 X-DM Pro</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="templates.html">Templates</a></li>
+                <li><a href="personalize.html" class="active">Personalize</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li><a href="api/">API</a></li>
+            </ul>
+            <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="personalize-hero">
+        <div class="container">
+            <h1>AI Personalization Engine</h1>
+            <p>See how our AI analyzes profiles and crafts unique, human-like messages that convert</p>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-grid">
+                <!-- Input Panel -->
+                <div class="demo-panel">
+                    <h3>Enter Target Profile</h3>
+                    <div class="input-group">
+                        <label>Twitter Username</label>
+                        <input type="text" id="targetUsername" placeholder="@elonmusk" value="@sarahchen">
+                        <button class="btn btn-primary" id="analyzeBtn">Analyze Profile</button>
+                    </div>
+
+                    <div class="template-selector">
+                        <label>Select Template</label>
+                        <select id="templateSelect">
+                            <option value="value_first">Value First Introduction</option>
+                            <option value="question">Question Hook</option>
+                            <option value="compliment">Content Compliment</option>
+                            <option value="networking">Shared Interest</option>
+                            <option value="resource">Resource Share</option>
+                        </select>
+                    </div>
+
+                    <div class="options-group">
+                        <label>Personalization Level</label>
+                        <div class="slider-container">
+                            <input type="range" min="1" max="3" value="2" class="slider" id="personalizationLevel">
+                            <div class="slider-labels">
+                                <span>Basic</span>
+                                <span>Standard</span>
+                                <span>Deep</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-large btn-primary btn-generate" id="generateBtn">✨ Generate Personalized DM</button>
+                </div>
+
+                <!-- Profile Preview -->
+                <div class="demo-panel profile-panel">
+                    <h3>Profile Analysis</h3>
+                    <div class="profile-card" id="profileCard">
+                        <div class="profile-header">
+                            <div class="profile-avatar">SC</div>
+                            <div class="profile-info">
+                                <h4>Sarah Chen</h4>
+                                <span class="profile-handle">@sarahchen</span>
+                            </div>
+                        </div>
+                        <div class="profile-bio">
+                            VP of Growth @TechScale | Building scalable acquisition systems | AI enthusiast | Marathon runner 🏃‍♀️
+                        </div>
+                        <div class="profile-tags">
+                            <span class="tag">SaaS</span>
+                            <span class="tag">Growth Marketing</span>
+                            <span class="tag">AI/ML</span>
+                            <span class="tag">Running</span>
+                        </div>
+                        <div class="profile-recent">
+                            <h5>Recent Activity</h5>
+                            <ul>
+                                <li>📝 Tweeted about "customer acquisition costs rising"</li>
+                                <li>💼 Posted job opening for "Growth Manager"</li>
+                                <li>🔥 Shared thread on "AI-powered personalization"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Output Panel -->
+                <div class="demo-panel output-panel">
+                    <h3>Generated Message</h3>
+                    <div class="output-container" id="outputContainer">
+                        <div class="placeholder">
+                            <span class="icon">✨</span>
+                            <p>Click "Generate Personalized DM" to see the magic</p>
+                        </div>
+                    </div>
+                    <div class="output-actions" id="outputActions" style="display: none;">
+                        <button class="btn btn-secondary" id="copyBtn">📋 Copy</button>
+                        <button class="btn btn-secondary" id="regenerateBtn">🔄 Regenerate</button>
+                        <button class="btn btn-primary" id="sendBtn">🚀 Send DM</button>
+                    </div>
+                    <div class="personalization-score" id="personalizationScore" style="display: none;">
+                        <h5>Personalization Quality Score</h5>
+                        <div class="score-bars">
+                            <div class="score-item">
+                                <span>Profile Relevance</span>
+                                <div class="score-bar"><div style="width: 94%"></div></div>
+                                <span class="score-value">94%</span>
+                            </div>
+                            <div class="score-item">
+                                <span>Natural Language</span>
+                                <div class="score-bar"><div style="width: 91%"></div></div>
+                                <span class="score-value">91%</span>
+                            </div>
+                            <div class="score-item">
+                                <span>Conversion Potential</span>
+                                <div class="score-bar"><div style="width: 87%"></div></div>
+                                <span class="score-value">87%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-personalization-works">
+        <div class="container">
+            <h2 class="section-title">How AI Personalization Works</h2>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-icon">🔍</div>
+                    <h4>1. Profile Analysis</h4>
+                    <p>AI scans bio, tweets, replies, and engagement patterns to build a comprehensive profile</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">🧠</div>
+                    <h4>2. Interest Mapping</h4>
+                    <p>Identifies topics, pain points, and interests from content and interactions</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">✍️</div>
+                    <h4>3. Message Crafting</h4>
+                    <p>Generates unique, contextually relevant messages that match the recipient's communication style</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">🎯</div>
+                    <h4>4. Conversion Optimization</h4>
+                    <p>Applies proven psychological triggers and call-to-actions tailored to the profile</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="personalization-features">
+        <div class="container">
+            <h2 class="section-title">Why Our Personalization Converts</h2>
+            
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-icon">🎭</div>
+                    <div class="feature-content">
+                        <h4>Tone Matching</h4>
+                        <p>Adapts message tone to match the recipient's style - professional, casual, or enthusiastic</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔥</div>
+                    <div class="feature-content">
+                        <h4>Recent Context</h4>
+                        <p>References recent tweets, announcements, or industry events for maximum relevance</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💡</div>
+                    <div class="feature-content">
+                        <h4>Pain Point Detection</h4>
+                        <p>Identifies and addresses specific challenges mentioned in tweets and bio</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-content">
+                        <h4>Conversion Scoring</h4>
+                        <p>Every message is scored for predicted response rate before sending</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="personalization-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">23%</span>
+                    <span class="stat-label">Average Response Rate</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5.2x</span>
+                    <span class="stat-label">Higher than Generic DMs</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">94%</span>
+                    <span class="stat-label">Appears Human-Written</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">0.3s</span>
+                    <span class="stat-label">Generation Time</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">🚀 X-DM Pro</div>
+                    <p>The most affordable, high-converting Twitter DM outreach platform.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="templates.html">Templates</a>
+                        <a href="personalize.html">Personalization</a>
+                        <a href="analytics.html">Analytics</a>
+                        <a href="#">Pricing</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="#">Help Center</a>
+                        <a href="api/">API Docs</a>
+                        <a href="#">Case Studies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/personalize.js"></script>
+</body>
+</html>

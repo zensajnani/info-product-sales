@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard | X-DM Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/analytics.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <div class="logo">🚀 X-DM Pro</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="templates.html">Templates</a></li>
+                <li><a href="personalize.html">Personalize</a></li>
+                <li><a href="analytics.html" class="active">Analytics</a></li>
+                <li><a href="api/">API</a></li>
+            </ul>
+            <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Dashboard Header -->
+    <header class="dashboard-header">
+        <div class="container">
+            <div class="header-row">
+                <div>
+                    <h1>Campaign Analytics</h1>
+                    <p>Real-time insights into your DM outreach performance</p>
+                </div>
+                <div class="header-actions">
+                    <select class="date-range">
+                        <option>Last 7 days</option>
+                        <option>Last 30 days</option>
+                        <option>Last 90 days</option>
+                        <option>This month</option>
+                    </select>
+                    <button class="btn btn-primary">Export Report</button>
+                </div>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="metrics-grid">
+                <div class="metric-card primary">
+                    <div class="metric-icon">📨</div>
+                    <div class="metric-content">
+                        <span class="metric-value">24,582</span>
+                        <span class="metric-label">Total DMs Sent</span>
+                        <span class="metric-change positive">+18% vs last period</span>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">👁️</div>
+                    <div class="metric-content">
+                        <span class="metric-value">21,847</span>
+                        <span class="metric-label">Opened</span>
+                        <span class="metric-change positive">88.9% open rate</span>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">💬</div>
+                    <div class="metric-content">
+                        <span class="metric-value">5,654</span>
+                        <span class="metric-label">Responses</span>
+                        <span class="metric-change positive">23% response rate</span>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🎯</div>
+                    <div class="metric-content">
+                        <span class="metric-value">1,247</span>
+                        <span class="metric-label">Conversions</span>
+                        <span class="metric-change positive">5.1% conv. rate</span>
+                    </div>
+                </div>
+                <div class="metric-card accent">
+                    <div class="metric-icon">💰</div>
+                    <div class="metric-content">
+                        <span class="metric-value">$368.73</span>
+                        <span class="metric-label">Total Spent</span>
+                        <span class="metric-change">$0.015 per DM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <section class="dashboard-content">
+        <div class="container">
+            <div class="dashboard-grid">
+                <!-- Main Chart -->
+                <div class="dashboard-card chart-card">
+                    <div class="card-header">
+                        <h3>Send & Response Activity</h3>
+                        <div class="legend">
+                            <span class="legend-item"><span class="dot sent"></span>Sent</span>
+                            <span class="legend-item"><span class="dot opened"></span>Opened</span>
+                            <span class="legend-item"><span class="dot responded"></span>Responded</span>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <div class="chart-y-axis">
+                            <span>5K</span>
+                            <span>4K</span>
+                            <span>3K</span>
+                            <span>2K</span>
+                            <span>1K</span>
+                            <span>0</span>
+                        </div>
+                        <div class="chart-bars">
+                            <div class="chart-bar-group">
+                                <div class="bar sent" style="height: 70%"></div>
+                                <div class="bar opened" style="height: 62%"></div>
+                                <div class="bar responded" style="height: 18%"></div>
+                                <span class="bar-label">Mon</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="bar sent" style="height: 85%"></div>
+                                <div class="bar opened" style="height: 76%"></div>
+                                <div class="bar responded" style="height: 22%"></div>
+                                <span class="bar-label">Tue</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="bar sent" style="height: 60%"></div>
+                                <div class="bar opened" style="height: 53%"></div>
+                                <div class="bar responded" style="height: 15%"></div>
+                                <span class="bar-label">Wed</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="bar sent" style="height: 90%"></div>
+                                <div class="bar opened" style="height: 81%"></div>
+                                <div class="bar responded" style="height: 25%"></div>
+                                <span class="bar-label">Thu</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="bar sent" style="height: 75%"></div>
+                                <div class="bar opened" style="height: 67%"></div>
+                                <div class="bar responded" style="height: 20%"></div>
+                                <span class="bar-label">Fri</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="bar sent" style="height: 45%"></div>
+                                <div class="bar opened" style="height: 40%"></div>
+                                <div class="bar responded" style="height: 12%"></div>
+                                <span class="bar-label">Sat</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="bar sent" style="height: 50%"></div>
+                                <div class="bar opened" style="height: 44%"></div>
+                                <div class="bar responded" style="height: 14%"></div>
+                                <span class="bar-label">Sun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Response Rate by Template -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Response Rate by Template</h3>
+                    </div>
+                    <div class="template-performance">
+                        <div class="template-row">
+                            <span class="template-name">Value First Intro</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 87%"></div>
+                            </div>
+                            <span class="template-rate">26.4%</span>
+                        </div>
+                        <div class="template-row">
+                            <span class="template-name">Question Hook</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 92%"></div>
+                            </div>
+                            <span class="template-rate">28.1%</span>
+                        </div>
+                        <div class="template-row">
+                            <span class="template-name">Mutual Connection</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 100%"></div>
+                            </div>
+                            <span class="template-rate">34.2%</span>
+                        </div>
+                        <div class="template-row">
+                            <span class="template-name">Content Compliment</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 79%"></div>
+                            </div>
+                            <span class="template-rate">24.8%</span>
+                        </div>
+                        <div class="template-row">
+                            <span class="template-name">Problem Agitation</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 61%"></div>
+                            </div>
+                            <span class="template-rate">19.3%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hourly Heatmap -->
+                <div class="dashboard-card heatmap-card">
+                    <div class="card-header">
+                        <h3>Best Time to Send (Response Rate %)</h3>
+                    </div>
+                    <div class="heatmap">
+                        <div class="heatmap-legend">
+                            <span>Low</span>
+                            <div class="heatmap-gradient"></div>
+                            <span>High</span>
+                        </div>
+                        <div class="heatmap-grid">
+                            <div class="heatmap-row">
+                                <span class="day-label">Mon</span>
+                                <div class="heatmap-cells">
+                                    <div class="cell" style="background: rgba(0,186,124,0.2)">8%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.4)">15%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.8)">28%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.9)">32%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.6)">22%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.3)">12%</div>
+                                </div>
+                            </div>
+                            <div class="heatmap-row">
+                                <span class="day-label">Tue</span>
+                                <div class="heatmap-cells">
+                                    <div class="cell" style="background: rgba(0,186,124,0.3)">10%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.5)">18%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.85)">30%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,1)">35%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.7)">24%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.25)">9%</div>
+                                </div>
+                            </div>
+                            <div class="heatmap-row">
+                                <span class="day-label">Wed</span>
+                                <div class="heatmap-cells">
+                                    <div class="cell" style="background: rgba(0,186,124,0.25)">9%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.45)">16%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.75)">26%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.85)">31%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.65)">21%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.2)">8%</div>
+                                </div>
+                            </div>
+                            <div class="heatmap-row">
+                                <span class="day-label">Thu</span>
+                                <div class="heatmap-cells">
+                                    <div class="cell" style="background: rgba(0,186,124,0.35)">11%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.55)">19%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.9)">33%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.95)">34%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.75)">25%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.3)">10%</div>
+                                </div>
+                            </div>
+                            <div class="heatmap-row">
+                                <span class="day-label">Fri</span>
+                                <div class="heatmap-cells">
+                                    <div class="cell" style="background: rgba(0,186,124,0.2)">7%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.4)">14%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.7)">24%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.8)">29%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.55)">18%</div>
+                                    <div class="cell" style="background: rgba(0,186,124,0.15)">6%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="heatmap-time-labels">
+                            <span>6am</span>
+                            <span>9am</span>
+                            <span>12pm</span>
+                            <span>3pm</span>
+                            <span>6pm</span>
+                            <span>9pm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Recent Campaigns</h3>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <div class="campaigns-list">
+                        <div class="campaign-item">
+                            <div class="campaign-info">
+                                <span class="campaign-name">SaaS Founders Outreach</span>
+                                <span class="campaign-meta">2,450 DMs • Started 3 days ago</span>
+                            </div>
+                            <div class="campaign-stats">
+                                <span class="stat-badge success">27% response</span>
+                            </div>
+                        </div>
+                        <div class="campaign-item">
+                            <div class="campaign-info">
+                                <span class="campaign-name">Product Hunt Follow-up</span>
+                                <span class="campaign-meta">1,200 DMs • Started 1 week ago</span>
+                            </div>
+                            <div class="campaign-stats">
+                                <span class="stat-badge success">31% response</span>
+                            </div>
+                        </div>
+                        <div class="campaign-item">
+                            <div class="campaign-info">
+                                <span class="campaign-name">Investor Networking</span>
+                                <span class="campaign-meta">890 DMs • Started 2 weeks ago</span>
+                            </div>
+                            <div class="campaign-stats">
+                                <span class="stat-badge warning">18% response</span>
+                            </div>
+                        </div>
+                        <div class="campaign-item">
+                            <div class="campaign-info">
+                                <span class="campaign-name">Developer Recruiting</span>
+                                <span class="campaign-meta">3,100 DMs • Started 2 weeks ago</span>
+                            </div>
+                            <div class="campaign-stats">
+                                <span class="stat-badge success">24% response</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Insights -->
+                <div class="dashboard-card insights-card">
+                    <div class="card-header">
+                        <h3>🤖 AI Insights</h3>
+                    </div>
+                    <div class="insights-list">
+                        <div class="insight-item">
+                            <span class="insight-icon">📈</span>
+                            <div class="insight-content">
+                                <strong>Response rates peak at 2-3 PM</strong>
+                                <span>Consider shifting more sends to this window</span>
+                            </div>
+                        </div>
+                        <div class="insight-item">
+                            <span class="insight-icon">🎯</span>
+                            <div class="insight-content">
+                                <strong>"Question Hook" template performing 12% better</strong>
+                                <span>Recommend A/B testing with 30% of volume</span>
+                            </div>
+                        </div>
+                        <div class="insight-item">
+                            <span class="insight-icon">⚡</span>
+                            <div class="insight-content">
+                                <strong>Wednesday sends showing 8% lower engagement</strong>
+                                <span>Consider reducing volume this day</span>
+                            </div>
+                        </div>
+                        <div class="insight-item">
+                            <span class="insight-icon">💡</span>
+                            <div class="insight-content">
+                                <strong>Predicted optimal spend: $520 next week</strong>
+                                <span>Based on current conversion trends</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROI Calculator -->
+                <div class="dashboard-card calculator-card">
+                    <div class="card-header">
+                        <h3>ROI Calculator</h3>
+                    </div>
+                    <div class="roi-calculator">
+                        <div class="roi-inputs">
+                            <div class="input-group">
+                                <label>Average Deal Value</label>
+                                <input type="number" value="5000" id="dealValue">
+                            </div>
+                            <div class="input-group">
+                                <label>DMs Sent</label>
+                                <input type="number" value="10000" id="dmCount">
+                            </div>
+                        </div>
+                        <div class="roi-results">
+                            <div class="roi-item">
+                                <span>Cost:</span>
+                                <strong id="costValue">$150.00</strong>
+                            </div>
+                            <div class="roi-item">
+                                <span>Expected Conversions:</span>
+                                <strong id="conversionValue">51</strong>
+                            </div>
+                            <div class="roi-item">
+                                <span>Revenue:</span>
+                                <strong id="revenueValue">$255,000</strong>
+                            </div>
+                            <div class="roi-item highlight">
+                                <span>ROI:</span>
+                                <strong id="roiValue">169,900%</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">🚀 X-DM Pro</div>
+                    <p>The most affordable, high-converting Twitter DM outreach platform.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="templates.html">Templates</a>
+                        <a href="personalize.html">Personalization</a>
+                        <a href="analytics.html">Analytics</a>
+                        <a href="#">Pricing</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="#">Help Center</a>
+                        <a href="api/">API Docs</a>
+                        <a href="#">Case Studies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/analytics.js"></script>
+</body>
+</html>

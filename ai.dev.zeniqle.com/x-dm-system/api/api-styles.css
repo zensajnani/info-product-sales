@@ -1,0 +1,364 @@
+/* API Documentation Styles */
+
+.api-header {
+    padding: 140px 0 60px;
+    background: linear-gradient(135deg, var(--surface), var(--bg));
+    text-align: center;
+}
+
+.api-header h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.api-header p {
+    color: var(--text-secondary);
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.api-badges {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* Layout */
+.api-content {
+    padding: 40px 0;
+}
+
+.api-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 48px;
+}
+
+/* Sidebar */
+.api-sidebar {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.sidebar-nav {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.nav-section {
+    margin-bottom: 24px;
+}
+
+.nav-section:last-child {
+    margin-bottom: 0;
+}
+
+.nav-section h4 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.nav-section ul {
+    list-style: none;
+}
+
+.nav-section li {
+    margin-bottom: 4px;
+}
+
+.nav-section a {
+    display: block;
+    padding: 6px 0;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav-section a:hover {
+    color: var(--primary);
+}
+
+/* Main Content */
+.api-main {
+    max-width: 800px;
+}
+
+.doc-section {
+    margin-bottom: 64px;
+    padding-bottom: 64px;
+    border-bottom: 1px solid var(--border);
+}
+
+.doc-section:last-child {
+    border-bottom: none;
+}
+
+.doc-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.doc-section h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 32px 0 16px;
+}
+
+.doc-section h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 24px 0 12px;
+}
+
+.doc-section p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.doc-section.highlight {
+    background: linear-gradient(135deg, rgba(29, 155, 240, 0.1), rgba(139, 92, 246, 0.1));
+    border: 1px solid var(--primary);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 64px;
+}
+
+/* Endpoint */
+.endpoint {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 16px 0;
+    font-family: 'SF Mono', monospace;
+    font-size: 14px;
+}
+
+.method {
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.method.get {
+    background: rgba(0, 186, 124, 0.2);
+    color: #00ba7c;
+}
+
+.method.post {
+    background: rgba(29, 155, 240, 0.2);
+    color: #1d9bf0;
+}
+
+.method.put {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+}
+
+.method.delete {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+/* Code Block */
+.code-block {
+    background: #0d1117;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 16px 0;
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.copy-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 12px;
+    transition: color 0.2s;
+}
+
+.copy-btn:hover {
+    color: var(--text);
+}
+
+.code-block pre {
+    padding: 16px;
+    overflow-x: auto;
+}
+
+.code-block code {
+    font-family: 'SF Mono', 'Monaco', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #e6edf3;
+}
+
+/* Info Box */
+.info-box {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 24px 0;
+}
+
+.info-box strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.info-box p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.info-box.info {
+    border-left: 4px solid var(--primary);
+}
+
+.info-box a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+/* API Table */
+.api-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+}
+
+.api-table th,
+.api-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.api-table th {
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.api-table td {
+    color: var(--text);
+}
+
+.api-table code {
+    background: var(--bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+/* Integration Info */
+.integration-info {
+    margin-top: 24px;
+}
+
+.integration-info p {
+    margin-bottom: 16px;
+}
+
+/* SDK Grid */
+.sdk-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.sdk-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+}
+
+.sdk-icon {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.sdk-card h4 {
+    margin: 0 0 12px;
+}
+
+.sdk-card code {
+    background: var(--surface);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .api-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .api-sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .api-header h1 {
+        font-size: 32px;
+    }
+    
+    .sdk-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .doc-section.highlight {
+        padding: 20px;
+    }
+}

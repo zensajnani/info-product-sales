@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation | X-DM Pro</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="api-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <div class="logo">🚀 X-DM Pro</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../templates.html">Templates</a></li>
+                <li><a href="../personalize.html">Personalize</a></li>
+                <li><a href="../analytics.html">Analytics</a></li>
+                <li><a href="index.html" class="active">API</a></li>
+            </ul>
+            <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- API Header -->
+    <header class="api-header">
+        <div class="container">
+            <h1>API Documentation</h1>
+            <p>Integrate X-DM Pro with your client-acquisition workflow</p>
+            <div class="api-badges">
+                <span class="badge">REST API</span>
+                <span class="badge">JSON</span>
+                <span class="badge">OAuth 2.0</span>
+                <span class="badge">Webhook Support</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="api-content">
+        <div class="container">
+            <div class="api-layout">
+                <!-- Sidebar -->
+                <aside class="api-sidebar">
+                    <nav class="sidebar-nav">
+                        <div class="nav-section">
+                            <h4>Getting Started</h4>
+                            <ul>
+                                <li><a href="#authentication">Authentication</a></li>
+                                <li><a href="#base-url">Base URL</a></li>
+                                <li><a href="#rate-limits">Rate Limits</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav-section">
+                            <h4>Endpoints</h4>
+                            <ul>
+                                <li><a href="#send-dm">Send DM</a></li>
+                                <li><a href="#batch-send">Batch Send</a></li>
+                                <li><a href="#get-templates">Get Templates</a></li>
+                                <li><a href="#personalize">Personalize Message</a></li>
+                                <li><a href="#campaigns">Campaigns</a></li>
+                                <li><a href="#analytics">Analytics</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav-section">
+                            <h4>Client Acquisition</h4>
+                            <ul>
+                                <li><a href="#lead-sync">Lead Sync</a></li>
+                                <li><a href="#lead-scoring">Lead Scoring</a></li>
+                                <li><a href="#email-sequences">Email Sequences</a></li>
+                                <li><a href="#webhooks">Webhooks</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+
+                <!-- Main Docs -->
+                <main class="api-main">
+                    <!-- Authentication -->
+                    <section id="authentication" class="doc-section">
+                        <h2>Authentication</h2>
+                        <p>All API requests require authentication using an API key in the Authorization header.</p>
+                        
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>HTTP Headers</span>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <pre><code>Authorization: Bearer YOUR_API_KEY
+Content-Type: application/json</code></pre>
+                        </div>
+
+                        <div class="info-box">
+                            <strong>🔑 API Key</strong>
+                            <p>Get your API key from the <a href="#">Dashboard → Settings → API Keys</a></p>
+                        </div>
+                    </section>
+
+                    <!-- Base URL -->
+                    <section id="base-url" class="doc-section">
+                        <h2>Base URL</h2>
+                        <div class="code-block">
+                            <pre><code>https://api.x-dm-pro.com/v1</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Rate Limits -->
+                    <section id="rate-limits" class="doc-section">
+                        <h2>Rate Limits</h2>
+                        <table class="api-table">
+                            <thead>
+                                <tr>
+                                    <th>Plan</th>
+                                    <th>Requests/min</th>
+                                    <th>Requests/day</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Starter</td>
+                                    <td>60</td>
+                                    <td>10,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Pro</td>
+                                    <td>300</td>
+                                    <td>100,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Enterprise</td>
+                                    <td>Unlimited</td>
+                                    <td>Unlimited</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- Send DM -->
+                    <section id="send-dm" class="doc-section">
+                        <h2>Send DM</h2>
+                        <p>Send a personalized DM to a single Twitter user.</p>
+                        
+                        <div class="endpoint">
+                            <span class="method post">POST</span>
+                            <code>/dms/send</code>
+                        </div>
+
+                        <h4>Request Body</h4>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>JSON</span>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <pre><code>{
+  "recipient": "elonmusk",
+  "template_id": "value_first",
+  "variables": {
+    "name": "Elon",
+    "topic": "Mars colonization"
+  },
+  "personalization_level": 2,
+  "track_opens": true
+}</code></pre>
+                        </div>
+
+                        <h4>Response</h4>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>200 OK</span>
+                            </div>
+                            <pre><code>{
+  "success": true,
+  "data": {
+    "dm_id": "dm_123456789",
+    "status": "sent",
+    "recipient": "elonmusk",
+    "message": "Hi Elon, I noticed your tweet about Mars colonization...",
+    "personalization_score": 94,
+    "cost": 0.015,
+    "sent_at": "2024-03-05T14:30:00Z"
+  }
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Batch Send -->
+                    <section id="batch-send" class="doc-section">
+                        <h2>Batch Send</h2>
+                        <p>Send DMs to multiple recipients at once (up to 1,000 per request).</p>
+                        
+                        <div class="endpoint">
+                            <span class="method post">POST</span>
+                            <code>/dms/batch</code>
+                        </div>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>JSON</span>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <pre><code>{
+  "recipients": ["user1", "user2", "user3"],
+  "template_id": "networking",
+  "personalization_level": 2,
+  "schedule": {
+    "start_time": "2024-03-06T09:00:00Z",
+    "spread_hours": 8
+  }
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Get Templates -->
+                    <section id="get-templates" class="doc-section">
+                        <h2>Get Templates</h2>
+                        <p>Retrieve all available DM templates or filter by category.</p>
+                        
+                        <div class="endpoint">
+                            <span class="method get">GET</span>
+                            <code>/templates</code>
+                        </div>
+
+                        <h4>Query Parameters</h4>
+                        <table class="api-table">
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>category</td>
+                                    <td>string</td>
+                                    <td>Filter by: cold, networking, sales, followup, recruiting</td>
+                                </tr>
+                                <tr>
+                                    <td>limit</td>
+                                    <td>integer</td>
+                                    <td>Max results (default: 20)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- Personalize Message -->
+                    <section id="personalize" class="doc-section">
+                        <h2>Personalize Message</h2>
+                        <p>Generate an AI-personalized message without sending.</p>
+                        
+                        <div class="endpoint">
+                            <span class="method post">POST</span>
+                            <code>/personalize</code>
+                        </div>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>JSON</span>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <pre><code>{
+  "recipient": "naval",
+  "template_id": "value_first",
+  "level": 2,
+  "analyze_profile": true
+}</code></pre>
+                        </div>
+
+                        <h4>Response</h4>
+                        <div class="code-block">
+                            <pre><code>{
+  "success": true,
+  "data": {
+    "message": "Hi Naval, I noticed your thread on wealth creation...",
+    "personalization_score": 94,
+    "profile_analysis": {
+      "detected_interests": ["startups", "investing", "philosophy"],
+      "recent_topics": ["wealth creation", "decision making"],
+      "tone": "thoughtful"
+    }
+  }
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Campaigns -->
+                    <section id="campaigns" class="doc-section">
+                        <h2>Campaigns</h2>
+                        
+                        <h3>Create Campaign</h3>
+                        <div class="endpoint">
+                            <span class="method post">POST</span>
+                            <code>/campaigns</code>
+                        </div>
+
+                        <div class="code-block">
+                            <pre><code>{
+  "name": "SaaS Founders Outreach",
+  "description": "Q1 growth campaign",
+  "template_id": "question_hook",
+  "target_audience": {
+    "filters": {
+      "bio_keywords": ["founder", "CEO"],
+      "min_followers": 1000,
+      "location": "US"
+    }
+  },
+  "budget": 500,
+  "schedule": {
+    "daily_limit": 1000,
+    "start_date": "2024-03-06",
+    "end_date": "2024-03-20"
+  }
+}</code></pre>
+                        </div>
+
+                        <h3>Get Campaign Status</h3>
+                        <div class="endpoint">
+                            <span class="method get">GET</span>
+                            <code>/campaigns/{campaign_id}</code>
+                        </div>
+                    </section>
+
+                    <!-- Analytics -->
+                    <section id="analytics" class="doc-section">
+                        <h2>Analytics</h2>
+                        
+                        <h3>Get Campaign Metrics</h3>
+                        <div class="endpoint">
+                            <span class="method get">GET</span>
+                            <code>/analytics/campaigns/{campaign_id}</code>
+                        </div>
+
+                        <h4>Response</h4>
+                        <div class="code-block">
+                            <pre><code>{
+  "success": true,
+  "data": {
+    "sent": 10000,
+    "delivered": 9876,
+    "opened": 8500,
+    "responded": 2300,
+    "converted": 510,
+    "rates": {
+      "open": 86.0,
+      "response": 23.0,
+      "conversion": 5.1
+    },
+    "cost": {
+      "total": 150.00,
+      "per_dm": 0.015,
+      "per_response": 0.065
+    }
+  }
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Client Acquisition Integration -->
+                    <section id="lead-sync" class="doc-section highlight">
+                        <h2>🎯 Client Acquisition Integration</h2>
+                        <p>Seamlessly connect X-DM Pro with your client-acquisition pipeline.</p>
+                        
+                        <div class="integration-info">
+                            <h3>Sync with Lead Scoring</h3>
+                            <p>Automatically sync high-scoring leads from your lead-scoring system to DM campaigns.</p>
+                            
+                            <div class="endpoint">
+                                <span class="method post">POST</span>
+                                <code>/integrations/leads/sync</code>
+                            </div>
+
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>JSON</span>
+                                    <button class="copy-btn">Copy</button>
+                                </div>
+                                <pre><code>{
+  "integration": "client-acquisition",
+  "sync_config": {
+    "min_lead_score": 75,
+    "sync_frequency": "realtime",
+    "auto_create_campaigns": true
+  },
+  "dm_settings": {
+    "template_id": "value_first",
+    "personalization_level": 2,
+    "delay_after_lead": "24h"
+  }
+}</code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="lead-scoring" class="doc-section">
+                        <h2>Lead Scoring Integration</h2>
+                        <p>Send DM engagement data back to your lead-scoring algorithm.</p>
+
+                        <div class="endpoint">
+                            <span class="method post">POST</span>
+                            <code>/integrations/leads/score</code>
+                        </div>
+
+                        <div class="code-block">
+                            <pre><code>{
+  "lead_id": "lead_123",
+  "dm_engagement": {
+    "dm_opened": true,
+    "dm_responded": true,
+    "response_sentiment": "positive",
+    "response_time_minutes": 45
+  },
+  "score_adjustment": {
+    "dm_open": 5,
+    "dm_response": 15,
+    "positive_sentiment": 10
+  }
+}</code></pre>
+                        </div>
+
+                        <div class="info-box info">
+                            <strong>💡 Tip</strong>
+                            <p>DM responses have shown to be strong buying intent signals. Recommend adding 15-25 points to lead score for DM responders.</p>
+                        </div>
+                    </section>
+
+                    <section id="email-sequences" class="doc-section">
+                        <h2>Email Sequence Integration</h2>
+                        <p>Coordinate Twitter DMs with email sequences for multi-channel outreach.</p>
+
+                        <div class="endpoint">
+                            <span class="method post">POST</span>
+                            <code>/integrations/sequences/sync</code>
+                        </div>
+
+                        <div class="code-block">
+                            <pre><code>{
+  "sequence_id": "seq_456",
+  "sequence_steps": [
+    {
+      "order": 1,
+      "channel": "twitter_dm",
+      "template_id": "value_first",
+      "delay_hours": 0
+    },
+    {
+      "order": 2,
+      "channel": "email",
+      "template_id": "welcome_series",
+      "delay_hours": 72,
+      "condition": "if_no_response"
+    },
+    {
+      "order": 3,
+      "channel": "twitter_dm",
+      "template_id": "follow_up",
+      "delay_hours": 168
+    }
+  ]
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <section id="webhooks" class="doc-section">
+                        <h2>Webhooks</h2>
+                        <p>Receive real-time notifications for DM events.</p>
+
+                        <h4>Configure Webhook</h4>
+                        <div class="code-block">
+                            <pre><code>POST /webhooks/configure
+{
+  "url": "https://your-domain.com/webhooks/x-dm",
+  "events": [
+    "dm.sent",
+    "dm.delivered",
+    "dm.opened",
+    "dm.responded",
+    "lead.converted"
+  ],
+  "secret": "your_webhook_secret"
+}</code></pre>
+                        </div>
+
+                        <h4>Webhook Payload Example</h4>
+                        <div class="code-block">
+                            <pre><code>{
+  "event": "dm.responded",
+  "timestamp": "2024-03-05T14:35:00Z",
+  "data": {
+    "dm_id": "dm_123456",
+    "campaign_id": "camp_789",
+    "recipient": {
+      "username": "sarahchen",
+      "name": "Sarah Chen",
+      "lead_score": 82
+    },
+    "response": {
+      "message": "This looks interesting! Can you tell me more?",
+      "sentiment": "positive",
+      "response_time_seconds": 1800
+    }
+  }
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Error Handling -->
+                    <section class="doc-section">
+                        <h2>Error Handling</h2>
+                        <table class="api-table">
+                            <thead>
+                                <tr>
+                                    <th>Status Code</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>200</td>
+                                    <td>Success</td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>Bad Request - Invalid parameters</td>
+                                </tr>
+                                <tr>
+                                    <td>401</td>
+                                    <td>Unauthorized - Invalid API key</td>
+                                </tr>
+                                <tr>
+                                    <td>429</td>
+                                    <td>Rate Limit Exceeded</td>
+                                </tr>
+                                <tr>
+                                    <td>500</td>
+                                    <td>Internal Server Error</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- SDK -->
+                    <section class="doc-section">
+                        <h2>SDK & Libraries</h2>
+                        <div class="sdk-grid">
+                            <div class="sdk-card">
+                                <span class="sdk-icon">🟨</span>
+                                <h4>Node.js</h4>
+                                <code>npm install x-dm-pro</code>
+                            </div>
+                            <div class="sdk-card">
+                                <span class="sdk-icon">🐍</span>
+                                <h4>Python</h4>
+                                <code>pip install x-dm-pro</code>
+                            </div>
+                            <div class="sdk-card">
+                                <span class="sdk-icon">☕</span>
+                                <h4>Java</h4>
+                                <code>Maven: x-dm-pro-client</code>
+                            </div>
+                            <div class="sdk-card">
+                                <span class="sdk-icon">🐘</span>
+                                <h4>PHP</h4>
+                                <code>composer require x-dm-pro/client</code>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">🚀 X-DM Pro</div>
+                    <p>The most affordable, high-converting Twitter DM outreach platform.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="api.js"></script>
+</body>
+</html>

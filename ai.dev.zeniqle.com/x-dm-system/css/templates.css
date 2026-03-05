@@ -1,0 +1,247 @@
+/* Templates Page Styles */
+
+.page-header {
+    padding: 140px 0 60px;
+    text-align: center;
+    background: var(--surface);
+}
+
+.page-header h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.page-header p {
+    color: var(--text-secondary);
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* Filter Tabs */
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    padding: 10px 20px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text-secondary);
+    border-radius: 9999px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.tab:hover {
+    border-color: var(--primary);
+    color: var(--text);
+}
+
+.tab.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+/* Templates Section */
+.templates-section {
+    padding: 60px 0;
+}
+
+.templates-section .container {
+    max-width: 1400px;
+}
+
+.templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 24px;
+}
+
+/* Template Card */
+.template-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all 0.3s;
+}
+
+.template-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+}
+
+.template-card.hidden {
+    display: none;
+}
+
+.template-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.template-category {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 9999px;
+}
+
+.template-category.cold {
+    background: rgba(29, 155, 240, 0.2);
+    color: #1d9bf0;
+}
+
+.template-category.sales {
+    background: rgba(236, 72, 153, 0.2);
+    color: #ec4899;
+}
+
+.template-category.networking {
+    background: rgba(139, 92, 246, 0.2);
+    color: #8b5cf6;
+}
+
+.template-category.followup {
+    background: rgba(0, 186, 124, 0.2);
+    color: #00ba7c;
+}
+
+.template-category.recruiting {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+}
+
+.template-id {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.template-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.template-preview {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text);
+    font-style: italic;
+    flex-grow: 1;
+}
+
+.template-stats {
+    display: flex;
+    gap: 16px;
+}
+
+.template-stats .stat {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.template-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+/* Variables Reference */
+.variables-reference {
+    margin-top: 80px;
+    padding: 40px;
+    background: var(--surface);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+.variables-reference h3 {
+    font-size: 20px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.variables-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.var-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px;
+    background: var(--bg);
+    border-radius: 8px;
+}
+
+.var-item code {
+    color: var(--primary);
+    font-family: 'SF Mono', monospace;
+    font-size: 14px;
+}
+
+.var-item span {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* Templates CTA */
+.templates-cta {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--surface), var(--bg));
+}
+
+.templates-cta h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.templates-cta p {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .templates-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-header h1 {
+        font-size: 32px;
+    }
+    
+    .filter-tabs {
+        padding: 0 16px;
+    }
+    
+    .tab {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}

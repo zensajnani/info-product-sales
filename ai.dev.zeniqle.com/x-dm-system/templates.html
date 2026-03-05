@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DM Template Library | X-DM Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/templates.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <div class="logo">🚀 X-DM Pro</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="templates.html" class="active">Templates</a></li>
+                <li><a href="personalize.html">Personalize</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li><a href="api/">API</a></li>
+            </ul>
+            <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>DM Template Library</h1>
+            <p>20 battle-tested templates for every outreach scenario. Personalize with AI variables.</p>
+            
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="tab active" data-category="all">All Templates</button>
+                <button class="tab" data-category="cold">Cold Outreach</button>
+                <button class="tab" data-category="networking">Networking</button>
+                <button class="tab" data-category="sales">Sales</button>
+                <button class="tab" data-category="followup">Follow-Up</button>
+                <button class="tab" data-category="recruiting">Recruiting</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Templates Grid -->
+    <section class="templates-section">
+        <div class="container">
+            <div class="templates-grid">
+                <!-- Template 1: Cold Outreach - Value First -->
+                <div class="template-card" data-category="cold">
+                    <div class="template-header">
+                        <span class="template-category cold">Cold Outreach</span>
+                        <span class="template-id">#001</span>
+                    </div>
+                    <h3>Value First Introduction</h3>
+                    <div class="template-preview">
+                        Hi {{name}}, I noticed your tweet about {{topic}}. I built something that {{solves_problem}} - figured it might help with {{pain_point}}. Happy to share if you're interested!
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 24% response rate</span>
+                        <span class="stat">⚡ High intent</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 2: Cold Outreach - Question Hook -->
+                <div class="template-card" data-category="cold">
+                    <div class="template-header">
+                        <span class="template-category cold">Cold Outreach</span>
+                        <span class="template-id">#002</span>
+                    </div>
+                    <h3>Question Hook</h3>
+                    <div class="template-preview">
+                        Hey {{name}}, quick question: are you currently {{activity_related_to_solution}}? We've been working on a tool that {{benefit}} and I'd love your take on whether it'd be useful for {{company}}.
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 28% response rate</span>
+                        <span class="stat">🔥 Conversational</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 3: Networking - Mutual Connection -->
+                <div class="template-card" data-category="networking">
+                    <div class="template-header">
+                        <span class="template-category networking">Networking</span>
+                        <span class="template-id">#003</span>
+                    </div>
+                    <h3>Mutual Connection</h3>
+                    <div class="template-preview">
+                        Hi {{name}}, {{mutual_connection}} mentioned we should connect! I saw your work on {{project_topic}} - really impressive. I'm currently exploring {{related_area}} and would love to exchange insights.
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 34% response rate</span>
+                        <span class="stat">✅ Warm intro</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 4: Networking - Shared Interest -->
+                <div class="template-card" data-category="networking">
+                    <div class="template-header">
+                        <span class="template-category networking">Networking</span>
+                        <span class="template-id">#004</span>
+                    </div>
+                    <h3>Shared Interest</h3>
+                    <div class="template-preview">
+                        Hey {{name}}, noticed we're both into {{interest_topic}}. Your recent post about {{specific_content}} really resonated. I'd love to connect and hear more about your perspective on {{related_topic}}.
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 31% response rate</span>
+                        <span class="stat">💬 Engaging</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 5: Networking - Event Follow-up -->
+                <div class="template-card" data-category="networking">
+                    <div class="template-header">
+                        <span class="template-category networking">Networking</span>
+                        <span class="template-id">#005</span>
+                    </div>
+                    <h3>Event Follow-up</h3>
+                    <div class="template-preview">
+                        Great connecting at {{event_name}}! Your insights on {{topic_discussed}} really stuck with me. Would love to continue the conversation - any interest in a quick coffee chat next week?
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 42% response rate</span>
+                        <span class="stat">🎯 Post-event</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 6: Sales - Problem Agitation -->
+                <div class="template-card" data-category="sales">
+                    <div class="template-header">
+                        <span class="template-category sales">Sales</span>
+                        <span class="template-id">#006</span>
+                    </div>
+                    <h3>Problem Agitation</h3>
+                    <div class="template-preview">
+                        {{name}}, I imagine {{pain_point}} is costing {{company}} more than it should. We've helped {{competitor/similar_company}} reduce {{metric}} by {{percentage}}. Worth a 10-min conversation to see if we can do the same for you?
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 19% response rate</span>
+                        <span class="stat">💰 High-ticket</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 7: Sales - ROI Focus -->
+                <div class="template-card" data-category="sales">
+                    <div class="template-header">
+                        <span class="template-category sales">Sales</span>
+                        <span class="template-id">#007</span>
+                    </div>
+                    <h3>ROI Focus</h3>
+                    <div class="template-preview">
+                        Hi {{name}}, {{company}}'s recent focus on {{initiative}} caught my attention. Our {{solution_type}} typically delivers {{roi_metric}} in {{timeframe}}. Happy to show you the numbers if you're open to it.
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 22% response rate</span>
+                        <span class="stat">📈 Data-driven</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 8: Sales - Social Proof -->
+                <div class="template-card" data-category="sales">
+                    <div class="template-header">
+                        <span class="template-category sales">Sales</span>
+                        <span class="template-id">#008</span>
+                    </div>
+                    <h3>Social Proof</h3>
+                    <div class="template-preview">
+                        Hey {{name}}, we just helped {{similar_company}} achieve {{result}} with {{solution_type}}. Given {{company}}'s similar structure, thought you might be interested in how we did it. Quick intro call this week?
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 26% response rate</span>
+                        <span class="stat">🏆 Credibility</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 9: Follow-Up - Gentle Reminder -->
+                <div class="template-card" data-category="followup">
+                    <div class="template-header">
+                        <span class="template-category followup">Follow-Up</span>
+                        <span class="template-id">#009</span>
+                    </div>
+                    <h3>Gentle Reminder</h3>
+                    <div class="template-preview">
+                        Hey {{name}}, following up on my last message about {{topic}}. No worries if now's not the right time - just wanted to make sure it didn't get buried. Still interested if you have a few mins to chat!
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 33% response rate</span>
+                        <span class="stat">🔄 Friendly</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 10: Follow-Up - Value Add -->
+                <div class="template-card" data-category="followup">
+                    <div class="template-header">
+                        <span class="template-category followup">Follow-Up</span>
+                        <span class="template-id">#010</span>
+                    </div>
+                    <h3>Value Add Follow-Up</h3>
+                    <div class="template-preview">
+                        {{name}}, thought of you when I saw this: {{resource/link}}. Relates to our conversation about {{topic}}. Let me know if you'd like to discuss how this applies to {{company}}!
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 38% response rate</span>
+                        <span class="stat">🎁 Value-first</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 11: Follow-Up - Breaking Up -->
+                <div class="template-card" data-category="followup">
+                    <div class="template-header">
+                        <span class="template-category followup">Follow-Up</span>
+                        <span class="template-id">#011</span>
+                    </div>
+                    <h3>Breaking Up</h3>
+                    <div class="template-preview">
+                        Hi {{name}}, haven't heard back so I'll assume {{solution_type}} isn't a priority right now. Totally get it! If things change and you'd like to explore {{benefit}}, feel free to reach out. No hard feelings!
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 15% response rate</span>
+                        <span class="stat">💔 Last attempt</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 12: Recruiting - Passive Candidate -->
+                <div class="template-card" data-category="recruiting">
+                    <div class="template-header">
+                        <span class="template-category recruiting">Recruiting</span>
+                        <span class="template-id">#012</span>
+                    </div>
+                    <h3>Passive Candidate</h3>
+                    <div class="template-preview">
+                        Hi {{name}}, your background in {{specialty}} caught my eye. We're building something special at {{company}} and I think your expertise would be a great fit. Worth a confidential chat to explore?
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 29% response rate</span>
+                        <span class="stat">👔 Hiring</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 13: Recruiting - Referral Request -->
+                <div class="template-card" data-category="recruiting">
+                    <div class="template-header">
+                        <span class="template-category recruiting">Recruiting</span>
+                        <span class="template-id">#013</span>
+                    </div>
+                    <h3>Referral Request</h3>
+                    <div class="template-preview">
+                        Hey {{name}}, hiring for a {{role}} and your network seems like the perfect place to look. Know anyone who'd be interested in {{opportunity_highlights}}? Happy to make it worth their while!
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 35% response rate</span>
+                        <span class="stat">🤝 Network</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 14: Cold Outreach - Content Compliment -->
+                <div class="template-card" data-category="cold">
+                    <div class="template-header">
+                        <span class="template-category cold">Cold Outreach</span>
+                        <span class="template-id">#014</span>
+                    </div>
+                    <h3>Content Compliment</h3>
+                    <div class="template-preview">
+                        {{name}}, your thread on {{topic}} was incredibly insightful. The point about {{specific_take}} was something I hadn't considered. Would love to connect and hear more of your thoughts on {{related_topic}}.
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 27% response rate</span>
+                        <span class="stat">📝 Genuine</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 15: Sales - Product Demo Invite -->
+                <div class="template-card" data-category="sales">
+                    <div class="template-header">
+                        <span class="template-category sales">Sales</span>
+                        <span class="template-id">#015</span>
+                    </div>
+                    <h3>Product Demo Invite</h3>
+                    <div class="template-preview">
+                        Hi {{name}}, I built {{product}} specifically for {{target_user}} dealing with {{problem}}. I'd love to show you a quick 5-min demo. Does tomorrow or Thursday work better for you?
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 18% response rate</span>
+                        <span class="stat">🎯 Demo</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 16: Networking - Industry Insight -->
+                <div class="template-card" data-category="networking">
+                    <div class="template-header">
+                        <span class="template-category networking">Networking</span>
+                        <span class="template-id">#016</span>
+                    </div>
+                    <h3>Industry Insight</h3>
+                    <div class="template-preview">
+                        Hey {{name}}, saw your insights on {{industry_trend}}. With {{company}}'s position in the market, I'd be curious to hear your take on where {{industry}} is heading. Worth trading notes sometime?
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 30% response rate</span>
+                        <span class="stat">💡 Thought leader</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 17: Follow-Up - Calendar Link -->
+                <div class="template-card" data-category="followup">
+                    <div class="template-header">
+                        <span class="template-category followup">Follow-Up</span>
+                        <span class="template-id">#017</span>
+                    </div>
+                    <h3>Calendar Link Follow-Up</h3>
+                    <div class="template-preview">
+                        Just following up, {{name}}. Here's my calendar if you want to grab 15 mins this week or next: {{calendar_link}}. If not, no worries - appreciate you considering it!
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 21% response rate</span>
+                        <span class="stat">📅 Easy booking</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 18: Sales - Competitive Angle -->
+                <div class="template-card" data-category="sales">
+                    <div class="template-header">
+                        <span class="template-category sales">Sales</span>
+                        <span class="template-id">#018</span>
+                    </div>
+                    <h3>Competitive Angle</h3>
+                    <div class="template-preview">
+                        {{name}}, noticed {{competitor}} just {{recent_news}}. Most companies we work with are responding by {{strategy}}. Wondering if {{company}} is thinking about it similarly? Happy to share what's working.
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 25% response rate</span>
+                        <span class="stat">⚔️ Competitive</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 19: Cold Outreach - Resource Share -->
+                <div class="template-card" data-category="cold">
+                    <div class="template-header">
+                        <span class="template-category cold">Cold Outreach</span>
+                        <span class="template-id">#019</span>
+                    </div>
+                    <h3>Resource Share</h3>
+                    <div class="template-preview">
+                        Hey {{name}}, came across {{resource}} and immediately thought of you given your work on {{topic}}. No pitch here - just thought it might be useful. Hope it helps!
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 36% response rate</span>
+                        <span class="stat">🎁 Giving</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Template 20: Recruiting - Talent Community -->
+                <div class="template-card" data-category="recruiting">
+                    <div class="template-header">
+                        <span class="template-category recruiting">Recruiting</span>
+                        <span class="template-id">#020</span>
+                    </div>
+                    <h3>Talent Community</h3>
+                    <div class="template-preview">
+                        Hi {{name}}, we're building a community of {{specialty}} professionals for occasional networking events and job opportunities. Interested in joining? No spam, just valuable connections.
+                    </div>
+                    <div class="template-stats">
+                        <span class="stat">📊 23% response rate</span>
+                        <span class="stat">👥 Community</span>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-small btn-primary">Use Template</button>
+                        <button class="btn btn-small btn-secondary">Preview</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variables Reference -->
+            <div class="variables-reference">
+                <h3>Available Variables</h3>
+                <div class="variables-grid">
+                    <div class="var-item">
+                        <code>{{name}}</code>
+                        <span>Recipient's first name</span>
+                    </div>
+                    <div class="var-item">
+                        <code>{{company}}</code>
+                        <span>Company name</span>
+                    </div>
+                    <div class="var-item">
+                        <code>{{topic}}</code>
+                        <span>Relevant topic from profile/tweets</span>
+                    </div>
+                    <div class="var-item">
+                        <code>{{pain_point}}</code>
+                        <span>Detected pain point</span>
+                    </div>
+                    <div class="var-item">
+                        <code>{{solution_type}}</code>
+                        <span>Type of solution offered</span>
+                    </div>
+                    <div class="var-item">
+                        <code>{{benefit}}</code>
+                        <span>Key benefit value prop</span>
+                    </div>
+                    <div class="var-item">
+                        <code>{{mutual_connection}}</code>
+                        <span>Shared connection name</span>
+                    </div>
+                    <div class="var-item">
+                        <code>{{recent_tweet}}</code>
+                        <span>Reference to recent content</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Footer -->
+    <section class="templates-cta">
+        <div class="container">
+            <h2>Ready to use these templates?</h2>
+            <p>Import any template and personalize at scale with our AI engine</p>
+            <a href="index.html#start" class="btn btn-large btn-primary">Start Free Trial →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">🚀 X-DM Pro</div>
+                    <p>The most affordable, high-converting Twitter DM outreach platform.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="templates.html">Templates</a>
+                        <a href="personalize.html">Personalization</a>
+                        <a href="analytics.html">Analytics</a>
+                        <a href="#">Pricing</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="#">Help Center</a>
+                        <a href="api/">API Docs</a>
+                        <a href="#">Case Studies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/templates.js"></script>
+</body>
+</html>}
