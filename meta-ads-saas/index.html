@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdFlow AI - Meta Ads Automation That Actually Works</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0084FF;
+            --primary-dark: #0066CC;
+            --secondary: #00D27F;
+            --accent: #FF6B35;
+            --dark: #0F172A;
+            --text: #1E293B;
+            --text-light: #64748B;
+            --bg-light: #F8FAFC;
+            --gradient: linear-gradient(135deg, #0084FF 0%, #00D27F 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 132, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-large {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+
+        section {
+            padding: 100px 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 160px 2rem 100px;
+            background: linear-gradient(180deg, #fff 0%, var(--bg-light) 100%);
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(0, 132, 255, 0.1);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero h1 span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 4rem;
+            justify-content: center;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        /* Features */
+        .features {
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.125rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            border-radius: 16px;
+            background: var(--bg-light);
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Pricing */
+        .pricing {
+            background: var(--bg-light);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .pricing-card.popular {
+            border: 2px solid var(--primary);
+            transform: scale(1.05);
+        }
+
+        .pricing-card.popular:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient);
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .plan-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-desc {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .plan-price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .plan-price span {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .plan-period {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .plan-features li {
+            padding: 0.5rem 0;
+            color: var(--text);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .plan-features li::before {
+            content: '✓';
+            width: 18px;
+            height: 18px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            flex-shrink: 0;
+        }
+
+        /* Calculator */
+        .calculator {
+            background: white;
+        }
+
+        .calculator-container {
+            background: var(--dark);
+            border-radius: 24px;
+            padding: 3rem;
+            color: white;
+        }
+
+        .calculator-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .calculator-header h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .calculator-header p {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .input-group input[type="range"] {
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        .input-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .results-panel {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .result-label {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .result-value {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        /* Comparison Table */
+        .comparison {
+            background: var(--bg-light);
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th {
+            background: var(--dark);
+            color: white;
+            padding: 1.25rem 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table th:first-child {
+            width: 30%;
+        }
+
+        .comparison-table th.highlight {
+            background: var(--primary);
+        }
+
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--bg-light);
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:nth-child(even) td {
+            background: var(--bg-light);
+        }
+
+        .comparison-table .check {
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        .comparison-table .cross {
+            color: var(--accent);
+        }
+
+        .comparison-table .price {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* CTA Section */
+        .cta {
+            background: var(--gradient);
+            text-align: center;
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-white:hover {
+            background: var(--dark);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 2rem 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-brand .logo {
+            color: white;
+            -webkit-text-fill-color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        .footer-links h4 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-stats {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">⚡ AdFlow AI</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#calculator">Calculator</a>
+                <a href="#comparison">Compare</a>
+                <a href="#" class="btn btn-secondary">Sign In</a>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                🚀 Trusted by 5,000+ brands
+            </div>
+            <h1>Meta Ads Automation That <span>Actually Works</span></h1>
+            <p>Stop babysitting your campaigns. AI-powered automation that optimizes budgets, kills underperformers, and scales winners 24/7.</p>
+            <div class="hero-buttons">
+                <a href="#pricing" class="btn btn-primary btn-large">Start Free Trial</a>
+                <a href="#calculator" class="btn btn-secondary btn-large">Calculate ROI</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value">41%</div>
+                    <div class="stat-label">Lower CPMs</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">3.2x</div>
+                    <div class="stat-label">ROAS Increase</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">15hr</div>
+                    <div class="stat-label">Weekly Time Saved</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything You Need to Scale</h2>
+                <p>Powerful automation tools designed for performance marketers</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Smart Budget Pacing</h3>
+                    <p>Automatically adjust daily budgets based on performance. Scale winners, pause losers without lifting a finger.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Auto A/B Testing</h3>
+                    <p>Continuously test creatives, audiences, and copy. Our AI identifies winning combinations and scales them.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚨</div>
+                    <h3>Performance Alerts</h3>
+                    <p>Get instant notifications when metrics spike or drop. Never miss a trend or anomaly again.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Cross-Account Dashboard</h3>
+                    <p>Manage all your Meta ad accounts in one place. Unified reporting across brands and clients.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Rule-Based Automation</h3>
+                    <p>Create custom rules with 50+ conditions. If X happens, do Y. No coding required.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Creative Insights</h3>
+                    <p>AI-powered analysis of your creatives. Learn what visual elements drive conversions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Start free, scale as you grow. No hidden fees, no surprises.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-name">Starter</div>
+                    <div class="plan-desc">For small businesses just getting started</div>
+                    <div class="plan-price">$49<span>/mo</span></div>
+                    <div class="plan-period">Billed monthly</div>
+                    <ul class="plan-features">
+                        <li>1 Meta Ad Account</li>
+                        <li>Up to $10K monthly ad spend</li>
+                        <li>5 automation rules</li>
+                        <li>Basic analytics</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" style="width: 100%;">Get Started</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="plan-name">Growth</div>
+                    <div class="plan-desc">For growing brands ready to scale</div>
+                    <div class="plan-price">$149<span>/mo</span></div>
+                    <div class="plan-period">Billed monthly</div>
+                    <ul class="plan-features">
+                        <li>3 Meta Ad Accounts</li>
+                        <li>Up to $50K monthly ad spend</li>
+                        <li>20 automation rules</li>
+                        <li>Advanced analytics</li>
+                        <li>A/B testing suite</li>
+                        <li>Priority chat support</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" style="width: 100%;">Get Started</a>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <div class="plan-name">Pro</div>
+                    <div class="plan-desc">For serious marketers and agencies</div>
+                    <div class="plan-price">$349<span>/mo</span></div>
+                    <div class="plan-period">Billed monthly</div>
+                    <ul class="plan-features">
+                        <li>10 Meta Ad Accounts</li>
+                        <li>Up to $200K monthly ad spend</li>
+                        <li>Unlimited automation rules</li>
+                        <li>AI-powered insights</li>
+                        <li>Custom rule builder</li>
+                        <li>White-label reports</li>
+                        <li>Dedicated account manager</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: 100%;">Start Free Trial</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="plan-name">Enterprise</div>
+                    <div class="plan-desc">For large teams with custom needs</div>
+                    <div class="plan-price">Custom</div>
+                    <div class="plan-period">Annual contracts available</div>
+                    <ul class="plan-features">
+                        <li>Unlimited ad accounts</li>
+                        <li>Unlimited ad spend</li>
+                        <li>Custom AI models</li>
+                        <li>SLA guarantee</li>
+                        <li>SSO & advanced security</li>
+                        <li>Custom integrations</li>
+                        <li>24/7 phone support</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" style="width: 100%;">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="calculator">
+        <div class="container">
+            <div class="calculator-container">
+                <div class="calculator-header">
+                    <h2>🧮 Calculate Your Potential Savings</h2>
+                    <p>See how much time and money you could save with AdFlow AI</p>
+                </div>
+                <div class="calculator-grid">
+                    <div class="calculator-inputs">
+                        <div class="input-group">
+                            <label>Monthly Ad Spend</label>
+                            <input type="range" id="adSpend" min="5000" max="500000" value="50000" step="5000" oninput="updateCalculator()">
+                            <div class="input-value">$<span id="adSpendValue">50,000</span>/month</div>
+                        </div>
+                        <div class="input-group">
+                            <label>Number of Active Campaigns</label>
+                            <input type="range" id="campaigns" min="1" max="100" value="10" oninput="updateCalculator()">
+                            <div class="input-value"><span id="campaignsValue">10</span> campaigns</div>
+                        </div>
+                        <div class="input-group">
+                            <label>Current Cost Per Acquisition (CPA)</label>
+                            <input type="range" id="cpa" min="10" max="500" value="45" oninput="updateCalculator()">
+                            <div class="input-value">$<span id="cpaValue">45</span>/conversion</div>
+                        </div>
+                        <div class="input-group">
+                            <label>Hours Spent Managing/Week</label>
+                            <input type="range" id="hours" min="1" max="40" value="15" oninput="updateCalculator()">
+                            <div class="input-value"><span id="hoursValue">15</span> hours/week</div>
+                        </div>
+                    </div>
+                    <div class="results-panel">
+                        <h3 style="margin-bottom: 1.5rem;">Your Projected Results</h3>
+                        <div class="result-item">
+                            <span class="result-label">Monthly Hours Saved</span>
+                            <span class="result-value" id="hoursSaved">45 hrs</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Improved CPA (est. 20%)</span>
+                            <span class="result-value" id="improvedCpa">$36.00</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Additional Conversions</span>
+                            <span class="result-value" id="additionalConv">+278</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Value of Time Saved</span>
+                            <span class="result-value" id="timeValue">$5,400</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Additional Revenue</span>
+                            <span class="result-value" id="addRevenue">$12,500</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Net Monthly Benefit</span>
+                            <span class="result-value" id="netBenefit">$17,651</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comparison" class="comparison">
+        <div class="container">
+            <div class="section-header">
+                <h2>How We Compare</h2>
+                <p>See why 5,000+ marketers choose AdFlow AI</p>
+            </div>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th class="highlight">AdFlow AI</th>
+                            <th>AdEspresso</th>
+                            <th>Madgicx</th>
+                            <th>Revealbot</th>
+                            <th>Trapica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Starting Price</strong></td>
+                            <td class="price">$49/mo</td>
+                            <td>$59/mo</td>
+                            <td>$44/mo</td>
+                            <td>$99/mo</td>
+                            <td>$99/mo</td>
+                        </tr>
+                        <tr>
+                            <td>Free Trial</td>
+                            <td class="check">✓ 14 days</td>
+                            <td class="cross">✗</td>
+                            <td class="check">✓ 14 days</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                        <tr>
+                            <td>AI Budget Optimization</td>
+                            <td class="check">✓ Advanced</td>
+                            <td class="cross">✗ Basic</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Cross-Account Dashboard</td>
+                            <td class="check">✓ Unlimited</td>
+                            <td class="check">✓ Limited</td>
+                            <td class="check">✓ Limited</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Creative Analysis</td>
+                            <td class="check">✓ AI-Powered</td>
+                            <td class="cross">✗</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Rule-Based Automation</td>
+                            <td class="check">✓ Unlimited</td>
+                            <td class="check">✓ Limited</td>
+                            <td class="check">✓ Unlimited</td>
+                            <td class="check">✓ Unlimited</td>
+                            <td class="check">✓ Limited</td>
+                        </tr>
+                        <tr>
+                            <td>A/B Testing Suite</td>
+                            <td class="check">✓ Built-in</td>
+                            <td class="check">✓ Built-in</td>
+                            <td class="check">✓ Built-in</td>
+                            <td class="cross">✗</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td>White-Label Reports</td>
+                            <td class="check">✓ Pro+</td>
+                            <td class="cross">✗</td>
+                            <td class="check">✓ Premium</td>
+                            <td class="check">✓ Enterprise</td>
+                            <td class="check">✓ Enterprise</td>
+                        </tr>
+                        <tr>
+                            <td>API Access</td>
+                            <td class="check">✓ All Plans</td>
+                            <td class="check">✓ Premium</td>
+                            <td class="check">✓ Enterprise</td>
+                            <td class="check">✓ All Plans</td>
+                            <td class="check">✓ Enterprise</td>
+                        </tr>
+                        <tr>
+                            <td>24/7 Support</td>
+                            <td class="check">✓ Enterprise</td>
+                            <td class="cross">✗</td>
+                            <td class="check">✓ Enterprise</td>
+                            <td class="check">✓ All Plans</td>
+                            <td class="check">✓ Enterprise</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Automate Your Meta Ads?</h2>
+            <p>Join 5,000+ marketers saving 15+ hours/week and boosting ROAS by 3.2x</p>
+            <a href="#pricing" class="btn btn-white btn-large">Start Your 14-Day Free Trial</a>
+            <p style="margin-top: 1.5rem; font-size: 0.875rem; opacity: 0.8;">No credit card required • Cancel anytime • Full feature access</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">⚡ AdFlow AI</div>
+                    <p>AI-powered Meta Ads automation for performance marketers who want to scale without the grind.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#calculator">ROI Calculator</a></li>
+                        <li><a href="#comparison">Compare</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 AdFlow AI. All rights reserved.</p>
+                <p>⚡ Powered by AI, built for marketers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateCalculator() {
+            const adSpend = parseInt(document.getElementById('adSpend').value);
+            const campaigns = parseInt(document.getElementById('campaigns').value);
+            const cpa = parseInt(document.getElementById('cpa').value);
+            const hours = parseInt(document.getElementById('hours').value);
+
+            document.getElementById('adSpendValue').textContent = adSpend.toLocaleString();
+            document.getElementById('campaignsValue').textContent = campaigns;
+            document.getElementById('cpaValue').textContent = cpa;
+            document.getElementById('hoursValue').textContent = hours;
+
+            const hoursSaved = Math.round(hours * 0.75);
+            document.getElementById('hoursSaved').textContent = hoursSaved + ' hrs';
+
+            const improvedCpa = cpa * 0.8;
+            document.getElementById('improvedCpa').textContent = '$' + improvedCpa.toFixed(2);
+
+            const currentConversions = Math.round(adSpend / cpa);
+            const newConversions = Math.round(adSpend / improvedCpa);
+            const additionalConv = newConversions - currentConversions;
+            document.getElementById('additionalConv').textContent = '+' + additionalConv.toLocaleString();
+
+            const hourlyRate = 100;
+            const timeValue = hoursSaved * hourlyRate;
+            document.getElementById('timeValue').textContent = '$' + timeValue.toLocaleString();
+
+            const LTV = 250;
+            const addRevenue = additionalConv * LTV;
+            document.getElementById('addRevenue').textContent = '$' + addRevenue.toLocaleString();
+
+            const toolCost = 149;
+            const netBenefit = addRevenue + timeValue - toolCost;
+            document.getElementById('netBenefit').textContent = '$' + netBenefit.toLocaleString();
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

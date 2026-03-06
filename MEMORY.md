@@ -105,6 +105,122 @@
 
 ---
 
+## Market Intelligence
+
+### March 6, 2026 — Research Pulse Update (9:37 AM UTC)
+**Full report:** `memory/2026-03-06-market-research.md`
+
+#### High-Priority Opportunities (Cron Research)
+
+**CLIENT ACQUISITION — Agentic AI SDRs**
+- AI improves lead qualification accuracy 40%, speed 3x, conversions 25-35%
+- Companies using AI see 20% higher conversion, 15% lower CAC
+- **Opportunity:** Agentic AI SDRs at $500-2000/mo vs human SDRs $3000-5000/mo
+- **Convergence:** First-party data + AI scoring stack (compliance-first post-cookie)
+- **Quick Win:** Vertical-specific autonomous prospecting (SaaS, agencies, local services)
+
+**AI CREATOR ECONOMY — Faceless Scale Infrastructure**
+- Prediction: 60% of top OnlyFans accounts AI models by 2026; 90% content AI-generated
+- Case study: $556k revenue with AI chatbots + automation
+- **Opportunity:** AI Persona-as-a-Service ($200-500/mo + 10-20% rev share)
+- **Pivot:** SFW niches (fitness, cosplay, lifestyle) — lower risk, advertiser-friendly
+- **Quick Win:** Creator automation agency tools (managing 10-100 accounts)
+
+**META ADS — AI Infrastructure Arbitrage**
+- Meta spending $115-135B on AI in 2026 (2x 2025)
+- Advantage+ campaigns: 10% lower CPL; AI dubbing unlocks global markets
+- **Opportunity:** Cross-platform AI media buyer (Meta + YouTube + TikTok)
+- **Convergence:** AI creative studio for algorithm-native UGC content ($2-5k/mo retainers)
+- **Quick Win:** Meta Advantage+ migration + CAPI implementation
+
+**Strategic Insight:** All three sectors converging on "faceless scale" — businesses built without personal brand dependency. Window: 6-12 months before saturation.
+
+---
+
+### March 6, 2026 — Research Pulse Update (9:02 AM)
+**Full report:** `memory/2026-03-06.md`
+
+#### 🎯 Client Acquisition (B2B SaaS)
+- **Shift from "leads" → "qualified signups + activation + expansion triggers"**
+- Segment by acquisition channel to identify high-LTV sources
+- Security as sales driver, not just checkbox
+- Opportunity: Channel quality measurement tools, AI-powered personalization
+
+#### 🤖 AI OnlyFans / Virtual Companions
+- **dFans** emerging as "OnlyFans of AI Era" with complete AI tool ecosystem
+- AI influencers: Automation suites for hyper-realistic 9:16 content generation
+- Revenue share models becoming standard: 35-40% (Aimour 35%, AI Allure 40%)
+- Leaders: Joi (conversation quality), Aimour (gradual relationship), AI Allure
+- Price points: $5-15/month for premium AI companion features
+
+#### 📱 Meta Ads Strategy 2026
+- **CRITICAL:** March 31, 2026 — detailed targeting exclusions REMOVED
+- Andromeda update killed manual targeting → "Stop guessing who. Focus on what"
+- Creative quality > audience precision (every asset = targeting signal)
+- CAPI (Conversion API) + Pixel now **required** — no longer optional
+- Max Conversions / Conversion Value outperforming Target CPA/ROAS
+- Opportunity: CAPI consulting, creative production tools, landing page optimization
+
+**Key Cross-Insight:** Creative is now the targeting lever — 50-100 AI-generated variations/month fed into Meta Advantage+ = winning strategy
+
+---
+
+## Market Intelligence
+
+### March 6, 2026 — Research Pulse Findings
+**Full report:** `memory/2026-03-06-market-research.md`
+
+#### Top Opportunities Identified
+
+**1. Client Acquisition (Highest Confidence)**
+- AI-powered SDRs reducing CAC by 30-50%
+- Community-led growth via Discord/Slack
+- Clay + AI personalization stack emerging as standard
+- Market: $87B → $127B by 2028 (32% CAGR)
+
+**2. AI Virtual Creators (High Risk/Reward)**
+- AI influencers earning $10K-100K/month
+- Platform arbitrage: Fanvue/Fansly before saturation
+- Compliance/verification tools needed (regulatory wave coming)
+- Market: $4.6B → $15B by 2028
+- **Risk:** Payment processor bans, platform policy changes
+
+**3. Meta Ads Automation (Immediate Opportunity)**
+- Advantage+ Shopping Campaigns showing +25-35% ROAS
+- Reels ads: 40% lower CPC than feed
+- Click-to-WhatsApp: +150% lead quality
+- Creative fatigue accelerating (7-14 day lifespan)
+- **Action:** CAPI implementation essential for attribution
+
+#### Converging Play: AI-Generated Creative + Meta Advantage+
+- Use Midjourney/Runway/ElevenLabs to produce 50-100 ad variations/month
+- Feed into Meta's AI for automated optimization
+- Result: 10x creative velocity at 1/10th the cost
+
+### March 6, 2026 — Research Pulse Update (7:41 AM)
+**Full report:** `memory/2026-03-06_market_research.md`
+
+**1. Client Acquisition — Agentic Prospecting**
+- Trend: Autonomous AI SDRs (research → outreach → objection handling → handoff)
+- Opportunity: Intent-to-Meeting pipelines (Clearbit → AI personalization → booking)
+- Play: Vertical-specific AI playbooks with proprietary objection handling data
+- Action: Evaluate intent data providers; test warm outbound
+
+**2. AI OnlyFans / Synthetic Creators**
+- Trend: Creator burnout → "always-on" AI personas
+- Infrastructure plays: Fan engagement tools, content pipelines, identity consistency engines
+- Risk: Platform policy changes, disclosure requirements
+- Action: Monitor OF/Patreon policy updates
+
+**3. Meta Ads — 2026 Evolution**
+- Trend: Advantage+ Creative outperforming manual; creative detection native
+- Opportunities: Script-to-ad pipelines, micro-segment creative, CAPI maturity
+- Action: Audit CAPI; test AI-generated video
+
+**Cross-Vertical:** AI infrastructure arbitrage (workflow integration > AI itself), compliance-first positioning, first-party data obsession
+
+---
+
 ## Notes
 
 ### March 5, 2026 — Overnight Build Session
