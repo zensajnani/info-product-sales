@@ -220,15 +220,76 @@
         </div>
     </section>
 
+    <!-- Lead Magnet Section -->
+    <section class="lead-magnet" id="lead-magnet" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 80px 0; color: white;">
+        <div class="container">
+            <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <div style="font-size: 48px; margin-bottom: 20px;">📈</div>
+                <h2 style="font-size: 36px; margin-bottom: 15px; color: white;">Free Guide: 5 AI Tools to 10x Your Client Acquisition</h2>
+                <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.9;">Discover the exact AI tools we use to book 50+ qualified demos monthly for B2B SaaS companies. Includes prompt templates, ROI calculator, and implementation checklist.</p>
+                
+                <form id="leadCaptureForm" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+                    <div style="display: grid; gap: 15px; margin-bottom: 20px;">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required style="padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 16px; width: 100%; box-sizing: border-box;">
+                        <input type="email" id="email" name="email" placeholder="Work Email" required style="padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 16px; width: 100%; box-sizing: border-box;">
+                        <input type="text" id="company" name="company" placeholder="Company Name" required style="padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 16px; width: 100%; box-sizing: border-box;">
+                        <select id="companySize" name="companySize" required style="padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 16px; width: 100%; box-sizing: border-box; background: white;">
+                            <option value="">Company Size</option>
+                            <option value="1-10">1-10 employees</option>
+                            <option value="11-50">11-50 employees</option>
+                            <option value="51-200">51-200 employees</option>
+                            <option value="201+">201+ employees</option>
+                        </select>
+                    </div>
+                    <button type="submit" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 40px; border: none; border-radius: 8px; font-size: 18px; font-weight: 600; cursor: pointer; width: 100%; transition: transform 0.2s;">
+                        📥 Download Free Guide
+                    </button>
+                    <p style="font-size: 12px; color: #6b7280; margin-top: 15px; margin-bottom: 0;">🔒 We respect your privacy. Unsubscribe anytime.</p>
+                </form>
+                
+                <div id="formSuccess" style="display: none; background: white; padding: 40px; border-radius: 12px; color: #1f2937;">
+                    <div style="font-size: 64px; margin-bottom: 20px;">🎉</div>
+                    <h3 style="font-size: 24px; margin-bottom: 10px;">Check your inbox!</h3>
+                    <p style="margin-bottom: 20px;">Your guide is on its way. While you wait...</p>
+                    <a href="#pricing" class="btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; display: inline-block;">Start Your Free DM Campaign →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta" id="start">
         <div class="container">
             <h2>Ready to Scale Your Twitter Outreach?</h2>
             <p>Join 2,000+ marketers sending 50M+ personalized DMs monthly</p>
-            <a href="#" class="btn btn-large btn-primary">Create Free Account →</a>
+            <a href="#lead-magnet" class="btn btn-large btn-primary">Get Started Free →</a>
             <p class="cta-note">No credit card required • Start with 100 free DMs</p>
         </div>
     </section>
+
+    <script>
+        document.getElementById('leadCaptureForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value,
+                companySize: document.getElementById('companySize').value,
+                source: 'landing_page_lead_magnet',
+                timestamp: new Date().toISOString()
+            };
+            
+            // Store lead (in production, send to your API)
+            console.log('Lead captured:', formData);
+            
+            // Show success message
+            document.getElementById('leadCaptureForm').style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+            
+            // TODO: Send to your lead API endpoint
+            // fetch('/api/leads', { method: 'POST', body: JSON.stringify(formData) })
+        });
+    </script>
 
     <!-- Footer -->
     <footer class="footer">
